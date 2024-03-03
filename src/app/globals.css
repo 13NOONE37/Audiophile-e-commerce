@@ -1,0 +1,24 @@
+:root {
+  --primary: #d87d4a;
+  --secondary: #fbaf85;
+  --dark: #101010;
+  --light: #f1f1f1;
+  --very-light: #fafafa;
+  --white: #fff;
+  --black: #000;
+
+  --max-width: 1110px;
+
+  --ff: 'Manrope', sans-serif;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+  font-size: 16px;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
