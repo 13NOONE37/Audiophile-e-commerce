@@ -1,0 +1,126 @@
+.categories {
+  padding: 0 1.5rem;
+  padding-top: 92px;
+}
+.content {
+  max-width: var(--max-width);
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 68px;
+}
+
+.card {
+  width: 100%;
+  max-width: 327px;
+  height: 165px;
+
+  position: relative;
+  background-color: var(--light);
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 17px;
+
+  padding-bottom: 22px;
+
+  text-decoration: none;
+  outline: none;
+}
+.imageContainer {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -40%);
+  transition: all 0.3s ease;
+
+  height: 140px;
+}
+.image {
+  width: auto;
+  height: 100%;
+}
+.name {
+  font-size: 15px;
+  font-weight: var(--fw-bold);
+  line-height: 20px;
+  letter-spacing: 1.07px;
+  text-transform: uppercase;
+  color: var(--black);
+}
+.link {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  text-decoration: none;
+  outline: none;
+}
+
+.link span {
+  font-size: 13px;
+  font-weight: var(--fw-bold);
+  line-height: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--black);
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.card:hover .link span {
+  color: var(--primary);
+  opacity: 1;
+}
+.card:hover .imageContainer,
+.card:focus .imageContainer {
+  transform: translate(-50%, -35%);
+}
+.card:focus .link span {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--primary);
+}
+.card:focus .link span {
+  color: var(--primary);
+  opacity: 1;
+}
+
+@media screen and (min-width: 710px) {
+  .categories {
+    padding: 0 2.375rem;
+    padding-top: 9.25rem;
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .card {
+    max-width: unset;
+  }
+}
+@media screen and (min-width: 1190px) {
+  .content {
+    gap: 30px;
+  }
+  .imageContainer {
+    height: 204px;
+  }
+  .card {
+    height: 204px;
+    gap: 15px;
+    padding-bottom: 30px;
+  }
+  .name {
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 1.29px;
+  }
+}
