@@ -13,24 +13,18 @@ const Outro: FC = () => {
   } = getImageProps({
     src: ImageDesktop,
     alt: altText,
-    width: 544,
-    height: 588,
   });
   const {
     props: { srcSet: tablet },
   } = getImageProps({
     src: ImageTablet,
     alt: altText,
-    width: 1378,
-    height: 600,
   });
   const {
     props: { srcSet: mobile },
   } = getImageProps({
     src: ImageMobile,
     alt: altText,
-    width: 654,
-    height: 600,
   });
 
   return (

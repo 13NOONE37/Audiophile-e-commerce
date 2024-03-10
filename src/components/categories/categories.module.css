@@ -1,6 +1,6 @@
 .categories {
   padding: 0 1.5rem;
-  padding-top: 92px;
+  padding-top: 5.75rem;
 }
 .content {
   max-width: var(--max-width);
@@ -10,7 +10,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  gap: 68px;
+  gap: 4.25rem;
 }
 
 .card {
@@ -26,9 +26,9 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  gap: 17px;
+  gap: 1.0625rem;
 
-  padding-bottom: 22px;
+  padding-bottom: 1.375rem;
 
   text-decoration: none;
   outline: none;
@@ -47,26 +47,26 @@
   height: 100%;
 }
 .name {
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: var(--fw-bold);
-  line-height: 20px;
-  letter-spacing: 1.07px;
+  line-height: 1.25rem;
+  letter-spacing: 0.0625rem;
   text-transform: uppercase;
   color: var(--black);
 }
 .link {
   display: flex;
   align-items: center;
-  gap: 13px;
+  gap: 0.8125rem;
   text-decoration: none;
   outline: none;
 }
 
 .link span {
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: var(--fw-bold);
-  line-height: 18px;
-  letter-spacing: 1px;
+  line-height: 1.125rem;
+  letter-spacing: 0.0625rem;
   text-transform: uppercase;
   color: var(--black);
   opacity: 0.5;
@@ -100,7 +100,7 @@
   .content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    gap: 0.625rem;
   }
   .card {
     max-width: unset;
@@ -108,19 +108,19 @@
 }
 @media screen and (min-width: 1190px) {
   .content {
-    gap: 30px;
+    gap: 1.875rem;
   }
   .imageContainer {
     height: 204px;
   }
   .card {
     height: 204px;
-    gap: 15px;
-    padding-bottom: 30px;
+    gap: 0.9375rem;
+    padding-bottom: 1.875rem;
   }
   .name {
-    font-size: 18px;
-    line-height: 25px;
-    letter-spacing: 1.29px;
+    font-size: 1.125rem;
+    line-height: 1.5625rem;
+    letter-spacing: 0.0625rem;
   }
 }

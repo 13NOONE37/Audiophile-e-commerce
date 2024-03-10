@@ -1,3 +1,4 @@
+import BestProducts from '@/components/bestProducts/bestProducts';
 import Categories from '@/components/categories/categories';
 import Outro from '@/components/outro/outro';
 import { FC } from 'react';
@@ -9,6 +10,7 @@ const page: FC = () => {
     <>
       Home
       <Categories />
+      <BestProducts />
       <Outro />
     </>
   );

@@ -1,0 +1,208 @@
+.products {
+  padding: 0 1.5rem;
+  padding-top: 7.5rem;
+}
+.content {
+  margin: auto;
+  max-width: var(--max-width);
+
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  gap: 1.5rem;
+}
+
+.primary {
+  padding: 3.4375rem 1.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--primary);
+  background-image: url('../../../public/images/home/desktop/pattern-circles.svg');
+  background-size: 558px;
+  background-position: center -120px;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.primaryContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.primary img {
+  height: 207px;
+}
+.primaryContent h2 {
+  margin-top: 2rem;
+  font-size: 2.25rem;
+  font-weight: var(--fw-bold);
+  line-height: 2.5rem;
+  letter-spacing: 0.0625rem;
+  color: var(--white);
+  max-width: 10ch;
+  text-align: center;
+}
+.primaryContent p {
+  margin: 1.5rem 0;
+  font-size: 0.9375rem;
+  font-weight: var(--fw-medium);
+  line-height: 1.5625rem;
+  color: var(--white);
+  opacity: 0.75;
+  text-align: center;
+  max-width: 32ch;
+}
+.primaryContent .primaryButton {
+  background-color: var(--black) !important;
+  text-transform: uppercase;
+}
+.primaryContent .primaryButton:hover {
+  background-color: #4c4c4c !important;
+  text-transform: uppercase;
+}
+.primaryContent .primaryButton:focus {
+  border-color: var(--secondary) !important;
+}
+
+.secondaryContent {
+  position: relative;
+  height: 320px;
+
+  padding: 0 1.625rem;
+  border-radius: 0.5rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  overflow: hidden;
+}
+
+.secondaryContent picture img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+.secondaryHeading {
+  font-size: 1.75rem;
+  font-weight: var(--fw-bold);
+  line-height: 2.375rem;
+  letter-spacing: 0.125rem;
+  color: var(--black);
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+.secondaryButton {
+  text-transform: uppercase;
+}
+
+.tertiaryImage {
+  height: 200px;
+}
+.tertiaryImage img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+.tertiaryContent {
+  padding: 2.5625rem 1.625rem;
+  border-radius: 0.5rem;
+
+  background-color: var(--light);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+@media screen and (min-width: 710px) {
+  .content {
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 'primary primary' 'secondary secondary' 'tertiaryImage tertiaryContent';
+    gap: 2rem 0.6875rem;
+  }
+  .primary {
+    padding: unset;
+    height: 720px;
+    grid-area: primary;
+    background-size: 944px;
+    background-position: center 125%;
+  }
+  .primary img {
+    height: 237px;
+  }
+  .primaryContent h2 {
+    margin-top: 4rem;
+    font-size: 3.5rem;
+    line-height: 3.625rem;
+    letter-spacing: 0.125rem;
+  }
+  .secondaryContent {
+    padding: 0 3.875rem;
+    grid-area: secondary;
+  }
+
+  .tertiaryImage {
+    height: 320px;
+    grid-area: tertiaryImage;
+  }
+  .tertiaryContent {
+    padding: unset;
+    padding-left: 2.625rem;
+    height: 320px;
+    grid-area: tertiaryContent;
+    align-items: flex-start;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1190px) {
+  .content {
+    gap: 30px 48px;
+  }
+  .primary {
+    height: 560px;
+    display: grid;
+    grid-template-columns: 528px 1fr;
+    grid-template-areas: 'image content';
+    overflow: hidden;
+
+    background-position: -100% 12%;
+  }
+  .primary picture {
+    grid-area: image;
+    place-self: end end;
+    transform: translateY(20px);
+  }
+  .primary img {
+    height: 493px;
+  }
+  .primaryContent {
+    grid-area: content;
+    align-items: flex-start;
+    margin: auto;
+  }
+  .primaryContent h2 {
+    text-align: start;
+  }
+  .primaryContent p {
+    text-align: start;
+    margin-top: 24px;
+    margin-bottom: 40px;
+  }
+  .secondaryContent {
+    padding: 0 6rem;
+  }
+  .tertiaryContent {
+    padding-left: 5.9375rem;
+  }
+}
