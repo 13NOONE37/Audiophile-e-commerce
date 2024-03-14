@@ -21,6 +21,7 @@ import PrimaryTablet from '../../../public/images/home/tablet/image-speaker-zx9.
 import PrimaryMobile from '../../../public/images/home/mobile/image-speaker-zx9.png';
 const PrimaryContent: FC = () => {
   const altText = 'ZX9 speaker';
+  const href = '/product/zx9-speaker';
   const {
     props: { srcSet: desktop },
   } = getImageProps({
@@ -56,7 +57,7 @@ const PrimaryContent: FC = () => {
 
         <LinkButton
           style={'primary'}
-          href={`/product/asdf`}
+          href={href}
           additionalClassnames={[styles.primaryButton]}
         >
           See product
@@ -71,6 +72,8 @@ import SecondaryTablet from '../../../public/images/home/tablet/image-speaker-zx
 import SecondaryMobile from '../../../public/images/home/mobile/image-speaker-zx7.jpg';
 const SecondaryContent: FC = () => {
   const altText = 'ZX7 speaker';
+  const href = '/product/zx7-speaker';
+
   const {
     props: { srcSet: desktop },
   } = getImageProps({
@@ -99,7 +102,7 @@ const SecondaryContent: FC = () => {
       <h3 className={styles.secondaryHeading}>ZX7 SPEAKER</h3>
       <LinkButton
         style={'secondary'}
-        href={`/product/asdf`}
+        href={href}
         additionalClassnames={[styles.secondaryButton]}
       >
         See product
@@ -114,6 +117,8 @@ import TertiaryMobile from '../../../public/images/home/mobile/image-earphones-y
 import LinkButton from '../buttons/linkButton';
 const TertiaryContent: FC = () => {
   const altText = 'YX1 earphones';
+  const href = '/product/yx1-earphones';
+
   const {
     props: { srcSet: desktop },
   } = getImageProps({
@@ -145,7 +150,7 @@ const TertiaryContent: FC = () => {
         <h4 className={styles.secondaryHeading}>YX1 EARPHONES</h4>
         <LinkButton
           style={'secondary'}
-          href={`/product/asdf`}
+          href={href}
           additionalClassnames={[styles.secondaryButton]}
         >
           See product

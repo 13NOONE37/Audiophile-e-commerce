@@ -1,0 +1,137 @@
+.body__no-scroll {
+  overflow: hidden;
+}
+.header {
+  height: 90px;
+  background-color: var(--black);
+}
+
+.content {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 0 1.5rem;
+
+  height: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  place-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+.navigation {
+  display: none;
+}
+.navigation ul {
+  display: flex;
+  gap: 2.125rem;
+  justify-content: center;
+  align-items: center;
+}
+.navigation ul li a {
+  font-size: 0.8125rem;
+  font-weight: var(--fw-bold);
+  color: var(--white);
+  line-height: 25px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 2px;
+  outline: none;
+}
+.navigation ul li a:hover {
+  transition: all 0.3s ease;
+  color: var(--primary);
+}
+.navigation ul li a:focus {
+  text-decoration-color: var(--primary);
+}
+
+.mobileNavigationContainer {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 999;
+
+  visibility: collapse;
+  overflow: auto;
+
+  transition: all 0.3s ease-in;
+}
+.mobileNavigationContainer__show {
+  background-color: rgba(0, 0, 0, 0.4);
+  visibility: visible;
+}
+
+.mobileNavigation {
+  width: 100%;
+  position: absolute;
+  background-color: var(--white);
+  padding-bottom: 2.1875rem;
+
+  clip-path: inset(0 0 100% 0);
+
+  transition: all 0.3s ease-in;
+}
+.mobileNavigationContainer__show .mobileNavigation {
+  clip-path: inset(0 0 0% 0);
+}
+
+.hamburger,
+.cart,
+.logo {
+  display: grid;
+  place-items: center;
+
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.hamburger svg,
+.cart svg {
+  transition: all 0.3s ease;
+  fill: var(--white);
+}
+.hamburger:hover svg,
+.cart:hover svg {
+  fill: var(--primary);
+}
+
+@media screen and (min-width: 710px) {
+  .header {
+    padding: 0 2.4375rem;
+  }
+  .content {
+    padding: unset;
+  }
+  .logo {
+    margin-left: 2.625rem;
+    justify-self: flex-start;
+  }
+  .mobileNavigation {
+    padding-bottom: 4.1875rem;
+  }
+}
+@media screen and (min-width: 1190px) {
+  .header {
+    height: 97px;
+  }
+  .content {
+    grid-template-columns: 143px 1fr 143px;
+  }
+  .hamburger {
+    display: none;
+  }
+  .cart {
+    justify-self: end;
+  }
+  .logo {
+    margin-left: unset;
+  }
+  .navigation {
+    display: block;
+  }
+  .mobileNavigationContainer {
+    display: none;
+  }
+}

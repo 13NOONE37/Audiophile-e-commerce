@@ -1,0 +1,24 @@
+.container {
+  height: 102px;
+  background-color: var(--black);
+  display: grid;
+  place-items: center;
+}
+.heading {
+  font-size: 1.75rem;
+  font-weight: var(--fw-bold);
+  line-height: 2.375rem;
+  letter-spacing: 0.125rem;
+  text-transform: uppercase;
+  color: var(--white);
+}
+@media screen and (min-width: 710px) {
+  .container {
+    height: 239px;
+  }
+  .heading {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+    letter-spacing: 0.0625rem;
+  }
+}
