@@ -1,5 +1,5 @@
 .outro {
-  padding: 7.5rem 1.5rem;
+  padding: 0 1.5rem;
 }
 .content {
   max-width: var(--max-width);
@@ -54,7 +54,7 @@
 }
 @media screen and (min-width: 550px) {
   .outro {
-    padding: 6rem 2.375rem;
+    padding: 0 2.375rem;
   }
   .heading {
     margin-top: 3.9375rem;
@@ -69,7 +69,7 @@
 }
 @media screen and (min-width: 1190px) {
   .outro {
-    padding: 200px 2.375rem;
+    padding: 0 2.375rem;
   }
   .content {
     display: grid;

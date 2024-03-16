@@ -1,27 +1,18 @@
 .categories {
-  margin-top: 5.75rem;
-}
-.bestProducts {
-  margin-top: 7.5rem;
+  margin-top: 10.75rem;
 }
 .outro {
   margin: 7.5rem 0;
 }
 @media screen and (min-width: 550px) {
-  .outro {
-    margin: 6rem 0;
-  }
 }
 @media screen and (min-width: 710px) {
-  .categories {
-    margin-top: 9.25rem;
-  }
 }
 @media screen and (min-width: 1190px) {
   .categories {
-    margin-top: 12.5rem;
+    margin-top: 15rem;
   }
   .outro {
-    margin: 12.5rem 0;
+    margin: 10rem 0;
   }
 }

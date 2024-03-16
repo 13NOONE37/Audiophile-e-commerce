@@ -1,0 +1,134 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0e0e0e;
+
+  z-index: -2;
+}
+
+.hero-content {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 0 1.5rem;
+}
+.image {
+  position: absolute;
+  top: 14.61px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 722px;
+  z-index: -1;
+  opacity: 0.521;
+}
+.heading {
+  background-color: transparent;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 0 24px;
+  padding-top: 108px;
+  padding-bottom: 112px;
+}
+.content span {
+  font-size: 14px;
+  font-weight: var(--fw-regular);
+  line-height: 19px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  color: var(--white);
+  opacity: 0.4964;
+}
+.content h2 {
+  font-size: 36px;
+  font-weight: var(--fw-bold);
+  line-height: 40px;
+  letter-spacing: 1.29px;
+  color: var(--white);
+  text-transform: uppercase;
+  text-align: center;
+  max-width: 14ch;
+
+  margin-top: 16px;
+}
+.content p {
+  font-size: 15px;
+  font-weight: var(--fw-medium);
+  line-height: 25px;
+  color: var(--white);
+  opacity: 0.75;
+  text-align: center;
+  max-width: 32ch;
+
+  margin-top: 24px;
+}
+.cta {
+  margin-top: 28px;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 710px) {
+  .image {
+    top: -37px;
+    height: 960px;
+  }
+  .hero-content {
+    padding: unset;
+    width: calc(100% - 2.4375rem * 2);
+  }
+  .content {
+    padding-top: 125px;
+    padding-bottom: 167px;
+  }
+  .content h2 {
+    font-size: 56px;
+    line-height: 58px;
+    letter-spacing: 2px;
+    margin-top: 24px;
+  }
+  .content p {
+    max-width: 40ch;
+  }
+  .cta {
+    margin-top: 40px;
+  }
+}
+@media screen and (min-width: 1190px) {
+  .hero::after {
+    background-color: #131313;
+  }
+  .image {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 112px);
+    transform: unset;
+    height: 886px;
+    opacity: 1;
+  }
+
+  .hero-content {
+    width: calc(100% - 2.4375rem * 2);
+  }
+  .content {
+    padding-top: 127px;
+    padding-bottom: 158px;
+    align-items: flex-start;
+  }
+  .content h2 {
+    text-align: start;
+  }
+  .content p {
+    text-align: start;
+  }
+}

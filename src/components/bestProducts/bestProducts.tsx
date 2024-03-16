@@ -1,10 +1,15 @@
 import React, { FC } from 'react';
+import cx from 'classnames';
 import styles from './bestProducts.module.css';
 import { getImageProps } from 'next/image';
 
-const BestProducts: FC = () => {
+interface BestProductsProps {
+  className?: string;
+}
+
+const BestProducts: FC<BestProductsProps> = ({ className }) => {
   return (
-    <section className={styles.products}>
+    <section className={cx(styles.products, className)}>
       <div className={styles.content}>
         <PrimaryContent />
         <SecondaryContent />

@@ -10,7 +10,10 @@ import IconHamburger from '@/icons/IconHamburger';
 import IconCart from '@/icons/IconCart';
 import Categories from '../categories/categories';
 
-const Header: FC = () => {
+interface HeaderProps {
+  className?: string[];
+}
+const Header: FC<HeaderProps> = ({ className = [] }) => {
   const [showMenu, setShowMenu] = useState(false);
 
   const containerRef = useRef<HTMLDivElement>(null);
@@ -41,7 +44,7 @@ const Header: FC = () => {
 
   return (
     <>
-      <header className={styles.header}>
+      <header className={cx(styles.header, ...className)}>
         <div className={styles.content}>
           <button
             className={styles.hamburger}

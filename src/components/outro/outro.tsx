@@ -1,11 +1,15 @@
 import React, { FC } from 'react';
+import cx from 'classnames';
 import styles from './outro.module.css';
 import ImageMobile from '../../../public/images/shared/mobile/image-best-gear.jpg';
 import ImageTablet from '../../../public/images/shared/tablet/image-best-gear.jpg';
 import ImageDesktop from '../../../public/images/shared/desktop/image-best-gear.jpg';
 import { getImageProps } from 'next/image';
 
-const Outro: FC = () => {
+interface OutroProps {
+  className?: string;
+}
+const Outro: FC<OutroProps> = ({ className }) => {
   const altText =
     'Man with headphones on his head propably listening to music.';
   const {
@@ -28,7 +32,7 @@ const Outro: FC = () => {
   });
 
   return (
-    <section className={styles.outro}>
+    <section className={cx(styles.outro, className)}>
       <div className={styles.content}>
         <picture className={styles.imageContainer}>
           <source media="(min-width:1190px)" srcSet={desktop} />

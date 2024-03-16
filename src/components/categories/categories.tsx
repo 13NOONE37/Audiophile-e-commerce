@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import cx from 'classnames';
 import Image, { type StaticImageData } from 'next/image';
 import Link from 'next/link';
 import styles from './categories.module.css';
@@ -7,9 +8,13 @@ import SpeakersImage from '../../../public/images/shared/desktop/image-category-
 import EarphonesImage from '../../../public/images/shared/desktop/image-category-thumbnail-earphones.png';
 import IconArrowRight from '@/icons/IconArrowRight';
 
-const Categories: FC = () => {
+interface CategoriesProps {
+  className?: string;
+}
+
+const Categories: FC<CategoriesProps> = ({ className }) => {
   return (
-    <section className={styles.categories}>
+    <section className={cx(styles.categories, className)}>
       <div className={styles.content}>
         <Card
           src={HeadphonesImage}

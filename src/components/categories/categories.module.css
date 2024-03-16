@@ -1,6 +1,5 @@
 .categories {
   padding: 0 1.5rem;
-  padding-top: 5.75rem;
 }
 .content {
   max-width: var(--max-width);
@@ -94,7 +93,6 @@
 @media screen and (min-width: 710px) {
   .categories {
     padding: 0 2.375rem;
-    padding-top: 9.25rem;
   }
 
   .content {
