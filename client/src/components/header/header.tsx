@@ -92,7 +92,7 @@ const Header: FC<HeaderProps> = ({ className = [] }) => {
           aria-hidden={showMenu}
           ref={containerRef}
         >
-          <Categories />
+          <Categories className={styles.categories} />
         </nav>
       </div>
     </>
