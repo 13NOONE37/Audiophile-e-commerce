@@ -1,0 +1,26 @@
+.products {
+  padding: 4rem 1.5rem;
+  padding-bottom: unset;
+}
+
+.content {
+  max-width: var(--max-width);
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 7.5rem;
+}
+
+@media screen and (min-width: 550px) {
+  .products {
+    padding: 7.5rem 2.4375rem;
+    padding-bottom: unset;
+  }
+}
+@media screen and (min-width: 1190px) {
+  .products {
+    padding: 10rem 0;
+    padding-bottom: unset;
+  }
+}

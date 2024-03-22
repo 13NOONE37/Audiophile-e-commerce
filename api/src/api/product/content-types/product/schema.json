@@ -1,0 +1,86 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "products",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255,
+      "unique": true
+    },
+    "price": {
+      "type": "decimal",
+      "required": true
+    },
+    "slug": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 255
+    },
+    "short_description": {
+      "type": "text",
+      "required": true
+    },
+    "features": {
+      "type": "blocks",
+      "required": true
+    },
+    "specification": {
+      "type": "blocks",
+      "required": true
+    },
+    "cart_image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "preview_image": {
+      "type": "component",
+      "repeatable": false,
+      "component": "images.responsive-image",
+      "required": true
+    },
+    "product_image": {
+      "type": "component",
+      "repeatable": false,
+      "component": "images.responsive-image",
+      "required": true
+    },
+    "gallery_images": {
+      "type": "component",
+      "repeatable": true,
+      "component": "images.responsive-image",
+      "max": 3,
+      "required": true
+    },
+    "recomendations": {
+      "type": "component",
+      "repeatable": true,
+      "component": "recommendations.recommendations",
+      "max": 3
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "headphones",
+        "speakers",
+        "earphones"
+      ],
+      "required": true
+    }
+  }
+}

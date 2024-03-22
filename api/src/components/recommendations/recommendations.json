@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_recommendations_recommendations",
+  "info": {
+    "displayName": "recommendations",
+    "icon": "command"
+  },
+  "options": {},
+  "attributes": {
+    "slug": {
+      "type": "string",
+      "unique": false
+    }
+  }
+}
