@@ -8,6 +8,7 @@
 
 .categories {
   margin-top: 5.75rem;
+  margin-bottom: 5.75rem;
 }
 
 .content {
@@ -80,6 +81,11 @@
 .mobileNavigationContainer__show .mobileNavigation {
   clip-path: inset(0 0 0% 0);
 }
+@media screen and (max-width: 1190px) {
+  body:has(.mobileNavigationContainer__show) {
+    overflow: hidden;
+  }
+}
 
 .hamburger,
 .cart,
@@ -90,6 +96,9 @@
   cursor: pointer;
   background-color: transparent;
   border: none;
+}
+.cart__disabled {
+  pointer-events: none;
 }
 
 .hamburger svg,
@@ -102,12 +111,37 @@
   fill: var(--primary);
 }
 
+.cartContainer {
+  position: relative;
+}
+.cartCount {
+  cursor: default;
+  box-sizing: content-box;
+
+  position: absolute;
+  right: -12px;
+  bottom: -12px;
+
+  font-size: 0.75rem;
+  font-weight: var(--fw-bold);
+  line-height: 1rem;
+  text-align: center;
+  color: var(--white);
+
+  min-width: 8px;
+  border-radius: 8px;
+  padding-right: 0.25rem;
+  padding-left: 0.25rem;
+  background-color: var(--primary);
+}
+
 @media screen and (min-width: 710px) {
   .header {
     padding: 0 2.4375rem;
   }
   .categories {
     margin-top: 9.25rem;
+    margin-bottom: unset;
   }
   .content {
     padding: unset;
@@ -144,5 +178,9 @@
   }
   .mobileNavigationContainer {
     display: none;
+  }
+
+  .cart__disabled {
+    pointer-events: all;
   }
 }

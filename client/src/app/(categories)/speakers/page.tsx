@@ -3,7 +3,7 @@ import { FC } from 'react';
 import styles from '../products.module.css';
 
 import HeaderIndicator from '@/components/headerIndicator/headerIndicator';
-import getPreviewProducts from '@/utils/getProducts';
+import getPreviewProducts from '@/actions/getProducts';
 import { ApiProductProduct } from '@/strapiTypes/contentTypes';
 import ProductPreview from '@/components/productPreview/productPreview';
 

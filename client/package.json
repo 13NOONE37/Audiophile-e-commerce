@@ -9,11 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@strapi/blocks-react-renderer": "^1.0.1",
     "classnames": "^2.5.1",
+    "focus-trap-react": "^10.2.3",
     "next": "14.1.1",
     "qs": "^6.12.0",
-    "react": "^18",
-    "react-dom": "^18"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/node": "^20",

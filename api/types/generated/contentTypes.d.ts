@@ -415,6 +415,11 @@ export interface ApiProductProduct extends Schema.CollectionType {
       >;
     category: Attribute.Enumeration<['headphones', 'speakers', 'earphones']> &
       Attribute.Required;
+    short_name: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 16;
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

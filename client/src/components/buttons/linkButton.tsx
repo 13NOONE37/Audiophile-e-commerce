@@ -6,11 +6,13 @@ import { ButtonProps } from './button';
 
 interface LinkProps extends Omit<ButtonProps, 'onClick'> {
   href: string;
+  scroll?: boolean;
 }
 const LinkButton: FC<LinkProps> = ({
   style,
   href,
   additionalClassnames = [],
+  scroll = true,
   children,
 }) => {
   return (
@@ -22,6 +24,7 @@ const LinkButton: FC<LinkProps> = ({
         styles[style],
         ...additionalClassnames,
       )}
+      scroll={scroll}
     >
       {children}
     </Link>

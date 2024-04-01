@@ -47,7 +47,7 @@ const HomeHero = () => {
           </p>
           <LinkButton
             style={'primary'}
-            href={'/product/xx99'}
+            href={'/product/xx99-mark-II-headphones'}
             additionalClassnames={[styles.cta]}
           >
             See product

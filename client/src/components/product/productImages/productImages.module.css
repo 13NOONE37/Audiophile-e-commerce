@@ -1,0 +1,90 @@
+.container {
+  padding: 0 1.5rem;
+  padding-top: 5.5rem;
+}
+.content {
+  max-width: var(--max-width);
+  margin: auto;
+
+  display: grid;
+  gap: 1.25rem;
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: 1fr;
+}
+.imageBox {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.imageBox img {
+  border-radius: 10px;
+}
+
+.topLeftImage img,
+.bottomLeftImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 327/174;
+}
+
+.topLeftImage {
+}
+.bottomLeftImage {
+}
+.rightImage {
+}
+.rightImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 327/368;
+}
+
+@media screen and (min-width: 710px) {
+  .container {
+    padding: 0 2.4375rem;
+    padding-top: 7.5rem;
+  }
+  .content {
+    grid-template-columns: 40% 60%;
+    grid-template-rows: auto auto;
+    grid-template-areas: 'topLeft right' 'bottomLeft right';
+    gap: 1.25rem 1.125rem;
+
+    aspect-ratio: 690/368;
+  }
+  .topLeftImage img,
+  .bottomLeftImage img {
+    aspect-ratio: 554/348;
+  }
+  .rightImage {
+    grid-area: right;
+  }
+  .rightImage img {
+    aspect-ratio: 790/736;
+  }
+}
+
+@media screen and (min-width: 1190px) {
+  .container {
+    padding: unset;
+    padding-top: 10rem;
+  }
+  .content {
+    gap: 2rem 1.875rem;
+    grid-template-columns: 445px 635px;
+    grid-template-rows: repeat(2, 280px);
+
+    aspect-ratio: unset;
+  }
+  .topLeftImage img,
+  .bottomLeftImage img {
+    aspect-ratio: 445/280;
+  }
+  .rightImage img {
+    aspect-ratio: 635/592;
+  }
+}

@@ -1,0 +1,18 @@
+.categories {
+  margin-top: 10.75rem;
+}
+.outro {
+  margin: 7.5rem 0;
+}
+@media screen and (min-width: 550px) {
+}
+@media screen and (min-width: 710px) {
+}
+@media screen and (min-width: 1190px) {
+  .categories {
+    margin-top: 15rem;
+  }
+  .outro {
+    margin: 10rem 0;
+  }
+}
