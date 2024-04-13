@@ -75,7 +75,10 @@ const CartModal = forwardRef<HTMLDivElement, Props>((props, ref) => {
           <LinkButton
             style="primary"
             href="/checkout"
-            additionalClassnames={[styles.cta]}
+            additionalClassnames={[
+              styles.cta,
+              cx({ [styles['cta__disabled']]: items.length < 1 }),
+            ]}
           >
             Checkout
           </LinkButton>

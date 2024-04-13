@@ -418,7 +418,7 @@ export interface ApiProductProduct extends Schema.CollectionType {
     short_name: Attribute.String &
       Attribute.Required &
       Attribute.SetMinMaxLength<{
-        maxLength: 16;
+        maxLength: 12;
       }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;

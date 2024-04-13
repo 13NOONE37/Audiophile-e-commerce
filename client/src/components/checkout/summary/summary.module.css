@@ -1,0 +1,131 @@
+.summary {
+  margin-top: 32px;
+  padding: 24px 32px;
+  align-self: flex-start;
+
+  background-color: var(--white);
+  border-radius: 10px;
+}
+.heading {
+  font-size: 18px;
+  font-weight: var(--fw-bold);
+  letter-spacing: 1.29px;
+  line-height: 25px;
+  color: var(--black);
+  text-transform: uppercase;
+}
+.items {
+  list-style-type: none;
+}
+
+.empty {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 32px 0;
+  font-size: 15px;
+  font-weight: var(--fw-medium);
+  color: var(--black);
+  opacity: 0.5;
+}
+.items {
+  margin: 32px 0;
+  list-style-type: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.item {
+  display: grid;
+  height: 64px;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 'image name select' 'image price select';
+  gap: 0 16px;
+  align-items: center;
+}
+
+.item--image {
+  width: 64px;
+  height: 64px;
+  border-radius: 10px;
+  grid-area: image;
+}
+.item--name,
+.item--price {
+  font-weight: var(--fw-bold);
+  line-height: 25px;
+  color: var(--black);
+
+  text-transform: uppercase;
+}
+
+.item--name {
+  font-size: 15px;
+  grid-area: name;
+  align-self: flex-end;
+}
+.item--price {
+  grid-area: price;
+  align-self: flex-start;
+  font-size: 14px;
+  opacity: 0.5;
+}
+.item--quantity {
+  font-size: 15px;
+  font-weight: var(--fw-bold);
+  line-height: 25px;
+  color: var(--black);
+  opacity: 0.5;
+  align-self: flex-end;
+}
+
+.priceBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.priceBox--name {
+  font-size: 15px;
+  font-weight: var(--fw-medium);
+  line-height: 25px;
+  color: var(--black);
+  opacity: 0.5;
+  text-transform: uppercase;
+}
+.priceBox--value {
+  font-size: 18px;
+  font-weight: var(--fw-bold);
+  line-height: 25px;
+  color: var(--black);
+}
+
+.priceBox--shipping,
+.priceBox--vat {
+  margin-top: 8px;
+}
+.priceBox--grandTotal {
+  margin-top: 24px;
+}
+.priceBox--grandTotal .priceBox--value {
+  color: var(--primary);
+}
+.cta {
+  margin-top: 32px;
+  width: 100% !important;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 710px) {
+  .summary {
+    padding: 32px;
+  }
+}
+
+@media screen and (min-width: 1190px) {
+  .summary {
+    margin-top: unset;
+    grid-area: 2/2/2/2;
+  }
+}

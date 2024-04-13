@@ -6,6 +6,7 @@ import HeaderIndicator from '@/components/headerIndicator/headerIndicator';
 import getPreviewProducts from '@/actions/getProducts';
 import { ApiProductProduct } from '@/strapiTypes/contentTypes';
 import ProductPreview from '@/components/productPreview/productPreview';
+import Head from 'next/head';
 
 const page: FC = async () => {
   const data = (await getPreviewProducts('speakers')) as ApiProductProduct[];
@@ -14,6 +15,10 @@ const page: FC = async () => {
     <>
       <HeaderIndicator>Speakers</HeaderIndicator>
       <section className={styles.products}>
+        <Head>
+          <title>abc</title>
+          <meta name="description" content="testowy test"></meta>
+        </Head>
         <div className={styles.content}>
           {data.map((item, index) => {
             return (

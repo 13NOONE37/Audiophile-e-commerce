@@ -85,7 +85,7 @@
     "short_name": {
       "type": "string",
       "required": true,
-      "maxLength": 16
+      "maxLength": 12
     }
   }
 }

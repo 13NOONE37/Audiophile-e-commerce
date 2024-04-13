@@ -1,0 +1,164 @@
+.billing {
+  align-self: flex-start;
+
+  background-color: var(--white);
+  border-radius: 10px;
+
+  padding: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.heading {
+  font-size: 1.75rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.0625rem;
+  line-height: 2.375rem;
+  color: var(--black);
+  text-transform: uppercase;
+}
+.fieldsBox {
+}
+.sectionHeading {
+  font-size: 0.8125rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.058125rem;
+  line-height: 1.5625rem;
+  color: var(--primary);
+  text-transform: uppercase;
+}
+.fieldsBox--fields {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.fieldsBox__payment .fieldsBox--fields {
+  margin-top: 3.5625rem;
+}
+
+.fieldsBox__payment .sectionHeading {
+  margin-bottom: 1rem;
+}
+.standaloneLabel {
+  font-size: 0.75rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: -0.013125rem;
+  line-height: 1rem;
+  color: var(--black);
+}
+.fieldsBox__payment .fieldsBox--radios {
+  margin-top: 1.0625rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.cashOnDeliveryContainer {
+  margin-top: 1.875rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.875rem;
+}
+.cashOnDeliveryContainer p {
+  font-size: 0.9375rem;
+  font-weight: var(--fw-medium);
+  line-height: 1.5625rem;
+  color: var(--black);
+  opacity: 0.5;
+  text-align: justify;
+}
+
+@media screen and (min-width: 710px) {
+  .billing {
+    align-self: flex-start;
+
+    background-color: var(--white);
+    border-radius: 10px;
+
+    padding: 1.875rem 1.6875rem;
+
+    gap: unset;
+  }
+  .heading {
+    font-size: 2rem;
+    letter-spacing: 0.0625rem;
+    line-height: 2.25rem;
+  }
+  .fieldsBox__billing {
+    margin-top: 2.5625rem;
+  }
+  .fieldsBox__shipping {
+    margin-top: 3.3125rem;
+  }
+  .fieldsBox__payment {
+    margin-top: 3.8125rem;
+  }
+
+  .fieldsBox__billing .fieldsBox--fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, auto);
+    gap: 3rem 1rem;
+  }
+  .fieldsBox__shipping .fieldsBox--fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 'address address' 'zip city' 'country _';
+    gap: 3rem 1rem;
+  }
+  .input__address {
+    grid-area: address;
+  }
+  .input__zip {
+    grid-area: zip;
+  }
+  .input__city {
+    grid-area: city;
+  }
+  .input__country {
+    grid-area: country;
+  }
+
+  .fieldsBox__payment {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    gap: 0 1rem;
+    grid-template-areas: 'heading _' 'name method' 'inputs inputs';
+  }
+  .fieldsBox__payment .sectionHeading {
+    grid-area: heading;
+  }
+  .fieldsBox__payment .standaloneLabel {
+    grid-area: name;
+  }
+  .fieldsBox__payment .fieldsBox--radios {
+    grid-area: method;
+    margin-top: unset;
+  }
+  .fieldsBox__payment .fieldsBox--fields {
+    grid-area: inputs;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .cashOnDeliveryContainer {
+    margin-top: 1.875rem;
+    grid-area: inputs;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 1190px) {
+  .billing {
+    grid-area: 2/1/2/1;
+    padding: 3.375rem 3rem;
+  }
+}

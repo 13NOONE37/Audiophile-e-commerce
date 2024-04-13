@@ -48,27 +48,31 @@ const CartItemsDisplay: FC<Props> = ({ productsDatabase }) => {
 
   return (
     <ul className={styles.items}>
-      {items.map((item) => {
-        const properties = productsDatabase.find(
-          (item2) => item2.slug === item.slug,
-        );
+      {items.length > 0 ? (
+        items.map((item) => {
+          const properties = productsDatabase.find(
+            (item2) => item2.slug === item.slug,
+          );
 
-        return (
-          <li className={styles.item} key={`cart_item__${item.slug}`}>
-            <img src={properties?.cart_image} alt={properties?.name} />
-            <span className={styles['item--name']}>{properties?.name}</span>
-            <span className={styles['item--price']}>
-              {properties?.price ? formatPrice(properties.price) : '-'}
-            </span>
-            <NumberSelect
-              value={item.quantity}
-              handleDecrease={() => handleDecrease(item)}
-              handleIncrease={() => handleIncrease(item)}
-              additionalClassnames={[styles.numberSelect]}
-            />
-          </li>
-        );
-      })}
+          return (
+            <li className={styles.item} key={`cart_item__${item.slug}`}>
+              <img src={properties?.cart_image} alt={properties?.name} />
+              <span className={styles['item--name']}>{properties?.name}</span>
+              <span className={styles['item--price']}>
+                {properties?.price ? formatPrice(properties.price) : '-'}
+              </span>
+              <NumberSelect
+                value={item.quantity}
+                handleDecrease={() => handleDecrease(item)}
+                handleIncrease={() => handleIncrease(item)}
+                additionalClassnames={[styles.numberSelect]}
+              />
+            </li>
+          );
+        })
+      ) : (
+        <span className={styles.empty}>Your cart is empty</span>
+      )}
     </ul>
   );
 };

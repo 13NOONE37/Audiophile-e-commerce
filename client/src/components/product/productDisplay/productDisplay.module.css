@@ -20,6 +20,10 @@
   background-color: transparent;
   border: none;
 }
+.goBack:hover {
+  color: var(--primary);
+  opacity: 1;
+}
 .imageContainer {
   margin-top: 1.5rem;
 }

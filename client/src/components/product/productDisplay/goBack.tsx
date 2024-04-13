@@ -11,6 +11,7 @@ const GoBack = () => {
         router.back();
       }}
       className={styles.goBack}
+      type={'button'}
     >
       Go Back
     </button>

@@ -1,10 +1,16 @@
 import { FC } from 'react';
-import styles from './page.module.css';
 
 import React from 'react';
+import Header from '@/components/header/header';
+import Checkout from '@/components/checkout/checkout';
 
 const page: FC = () => {
-  return <div>checkout</div>;
+  return (
+    <>
+      <Header />
+      <Checkout />
+    </>
+  );
 };
 
 export default page;

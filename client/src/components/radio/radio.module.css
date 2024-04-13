@@ -1,0 +1,70 @@
+.container {
+  cursor: pointer;
+
+  position: relative;
+
+  border: 1px solid #cfcfcf;
+  border-radius: 8px;
+  width: 100%;
+  height: 56px;
+  transition: 120ms border-color ease-in-out;
+}
+.container:hover,
+.container:has(.input:checked) {
+  border-color: var(--primary);
+}
+
+.label {
+  cursor: inherit;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding-left: 52px;
+
+  font-size: 0.875rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: -0.015625rem;
+  line-height: 1.1875rem;
+  color: var(--black);
+
+  display: flex;
+  align-items: center;
+}
+.input {
+  cursor: inherit;
+
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  height: 20px;
+  width: 20px;
+
+  border: 1px solid #cfcfcf;
+  border-radius: 50%;
+
+  display: grid;
+  place-content: center;
+}
+.input::before {
+  content: '';
+
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+
+  transform: scale(0);
+  transform-origin: center;
+
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--primary);
+}
+.input:checked::before {
+  transform: scale(1);
+}

@@ -10,6 +10,7 @@ import ProductImages, {
   ImageType,
 } from '@/components/product/productImages/productImages';
 import ProductRecomendations from '@/components/product/productRecomendations/productRecomendations';
+import Head from 'next/head';
 
 const getProduct = async (slug: string) => {
   const reqOptions: RequestInit = {
@@ -86,6 +87,10 @@ const page: FC<pageProps> = async ({ params }) => {
 
   return (
     <section className={styles.container}>
+      <Head>
+        <title>abc</title>
+        <meta property="og:title" content="My page title" key="title" />
+      </Head>
       <ProductDisplay
         slug={data.attributes.slug}
         name={data.attributes.name}

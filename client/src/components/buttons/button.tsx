@@ -1,5 +1,5 @@
 'use client';
-import React, { FC, MouseEventHandler } from 'react';
+import React, { ButtonHTMLAttributes, FC, MouseEventHandler } from 'react';
 import cx from 'classnames';
 import styles from './button.module.css';
 
@@ -8,6 +8,8 @@ export interface ButtonProps {
   onClick: MouseEventHandler<HTMLButtonElement>;
   children: React.ReactNode;
   additionalClassnames?: String[];
+  type?: 'submit' | 'button';
+  disabled?: boolean;
 }
 
 const Button: FC<ButtonProps> = ({
@@ -15,11 +17,15 @@ const Button: FC<ButtonProps> = ({
   onClick,
   additionalClassnames = [],
   children,
+  type = 'button',
+  disabled = false,
 }) => {
   return (
     <button
       onClick={onClick}
       className={cx(styles.button, styles[style], ...additionalClassnames)}
+      type={type}
+      disabled={disabled}
     >
       {children}
     </button>

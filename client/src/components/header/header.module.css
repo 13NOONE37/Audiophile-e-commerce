@@ -61,7 +61,7 @@
   visibility: collapse;
   overflow: auto;
 
-  transition: all 0.3s ease-in;
+  transition: all 0.2s ease-in;
 }
 .mobileNavigationContainer__show {
   background-color: rgba(0, 0, 0, 0.4);
@@ -76,7 +76,7 @@
 
   clip-path: inset(0 0 100% 0);
 
-  transition: all 0.3s ease-in;
+  transition: all 0.2s ease-in;
 }
 .mobileNavigationContainer__show .mobileNavigation {
   clip-path: inset(0 0 0% 0);

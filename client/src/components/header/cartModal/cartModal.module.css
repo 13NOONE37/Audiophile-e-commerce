@@ -28,7 +28,7 @@
   border-radius: 8px;
   clip-path: inset(0 0 100% 0);
 
-  transition: clip-path 0.3s ease-in;
+  transition: clip-path 0.2s ease-in;
 }
 .cartModalContainer__show .cartModal {
   clip-path: inset(0 0 0% 0);
@@ -69,6 +69,17 @@ body:has(.cartModalContainer__show) {
   color: var(--black);
   opacity: 0.5;
   text-decoration: underline;
+}
+
+.empty {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 32px 0;
+  font-size: 15px;
+  font-weight: var(--fw-medium);
+  color: var(--black);
+  opacity: 0.5;
 }
 
 .items {
@@ -143,6 +154,10 @@ body:has(.cartModalContainer__show) {
 .cta {
   margin-top: 24px;
   width: 100% !important;
+}
+.cta__disabled {
+  pointer-events: none;
+  opacity: 0.5;
 }
 @media screen and (min-width: 425px) {
   .cartModal {

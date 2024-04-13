@@ -18,16 +18,20 @@
 .link {
   text-decoration: none;
 }
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
 .button.primary {
   background-color: var(--primary);
   color: var(--white);
   border: 3px solid transparent;
 }
 
-.button.primary:hover {
+.button.primary:not(:disabled):hover {
   background-color: var(--secondary);
 }
-.button.primary:focus {
+.button.primary:not(:disabled):focus {
   background-color: var(--secondary);
 }
 .button.secondary {
@@ -35,7 +39,7 @@
   background-color: transparent;
   border: 1px solid var(--black);
 }
-.button.secondary:hover {
+.button.secondary:not(:disabled):hover {
   color: var(--white);
   background-color: var(--black);
 }
