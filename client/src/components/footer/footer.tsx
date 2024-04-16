@@ -31,10 +31,10 @@ const Footer: FC = () => {
           </ul>
         </nav>
         <p className={styles.information}>
-          Audiophile is an all in one stop to fulfill your audio needs. We're a
-          small team of music lovers and sound specialists who are devoted to
-          helping you get the most out of personal audio. Come and visit our
-          demo facility - we&apos;re open 7 days a week.
+          Audiophile is an all in one stop to fulfill your audio needs.
+          We&apos;re a small team of music lovers and sound specialists who are
+          devoted to helping you get the most out of personal audio. Come and
+          visit our demo facility - we&apos;re open 7 days a week.
         </p>
         <span className={styles.copyright}>
           Copyright 2021. All Rights Reserved
