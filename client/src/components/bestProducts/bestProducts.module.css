@@ -195,8 +195,8 @@
   }
   .primaryContent p {
     text-align: start;
-    margin-top: 24px;
-    margin-bottom: 40px;
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
   }
   .secondaryContent {
     padding: 0 6rem;

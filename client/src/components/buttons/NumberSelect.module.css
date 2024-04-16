@@ -7,10 +7,10 @@
   grid-template-columns: repeat(3, 1fr);
 
   font-family: '__Manrope_0db549', '__Manrope_Fallback_0db549';
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: var(--fw-bold);
-  line-height: 18px;
-  letter-spacing: 1px;
+  line-height: 1.125rem;
+  letter-spacing: 0.0625rem;
   text-align: center;
 }
 .containerWithoutInput {

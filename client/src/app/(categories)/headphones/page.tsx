@@ -6,7 +6,13 @@ import HeaderIndicator from '@/components/headerIndicator/headerIndicator';
 import { ApiProductProduct } from '@/strapiTypes/contentTypes';
 import ProductPreview from '@/components/productPreview/productPreview';
 import getPreviewProducts from '@/actions/getProducts';
+import { Metadata } from 'next';
 
+export const metadata: Metadata = {
+  title: 'Headphones',
+  description:
+    'Escape into your own world of pristine sound with our curated selection of headphones. Whether you crave studio-quality precision or wireless convenience, we have the perfect pair for every audiophile.',
+};
 const page: FC = async () => {
   const data = (await getPreviewProducts('headphones')) as ApiProductProduct[];
 

@@ -7,6 +7,13 @@ import getPreviewProducts from '@/actions/getProducts';
 import { ApiProductProduct } from '@/strapiTypes/contentTypes';
 import ProductPreview from '@/components/productPreview/productPreview';
 import Head from 'next/head';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Speakers',
+  description:
+    'Immerse yourself in rich audio with our collection of high-fidelity speakers. From floor-standing marvels to compact bookshelf wonders, find your perfect sound companion here.',
+};
 
 const page: FC = async () => {
   const data = (await getPreviewProducts('speakers')) as ApiProductProduct[];

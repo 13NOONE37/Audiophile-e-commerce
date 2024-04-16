@@ -11,7 +11,7 @@ import ProductImages, {
 } from '@/components/product/productImages/productImages';
 import ProductRecomendations from '@/components/product/productRecomendations/productRecomendations';
 import Head from 'next/head';
-
+import { Metadata } from 'next';
 const getProduct = async (slug: string) => {
   const reqOptions: RequestInit = {
     headers: {
@@ -123,3 +123,33 @@ const page: FC<pageProps> = async ({ params }) => {
 };
 
 export default page;
+
+export async function generateMetadata({
+  params,
+}: pageProps): Promise<Metadata> {
+  const data = (await getProduct(params.slug)) as ApiProductProduct;
+  return {
+    title: `${data.attributes.name}`,
+    description: `${data.attributes.short_description}`,
+    openGraph: {
+      type: 'website',
+      siteName: 'Audiophile store',
+      title: `${data.attributes.name}`,
+      description: `${data.attributes.short_description}`,
+      images: [
+        {
+          url: `${process.env.API_URL}${data.attributes.cart_image}`,
+          width: 150,
+          height: 150,
+          alt: data.attributes.name,
+        },
+        {
+          url: `${process.env.API_URL}${data.attributes.product_image.mobile.data.attributes.url}`,
+          width: 654,
+          height: 654,
+          alt: data.attributes.product_image.alt_text,
+        },
+      ],
+    },
+  };
+}

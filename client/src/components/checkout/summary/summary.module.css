@@ -1,16 +1,16 @@
 .summary {
-  margin-top: 32px;
-  padding: 24px 32px;
+  margin-top: 2rem;
+  padding: 1.5rem 2rem;
   align-self: flex-start;
 
   background-color: var(--white);
   border-radius: 10px;
 }
 .heading {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: var(--fw-bold);
-  letter-spacing: 1.29px;
-  line-height: 25px;
+  letter-spacing: 0.0625rem;
+  line-height: 1.5625rem;
   color: var(--black);
   text-transform: uppercase;
 }
@@ -22,19 +22,19 @@
   display: block;
   width: 100%;
   text-align: center;
-  margin: 32px 0;
-  font-size: 15px;
+  margin: 2rem 0;
+  font-size: 0.9375rem;
   font-weight: var(--fw-medium);
   color: var(--black);
   opacity: 0.5;
 }
 .items {
-  margin: 32px 0;
+  margin: 2rem 0;
   list-style-type: none;
 
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 1.5rem;
 }
 
 .item {
@@ -43,7 +43,7 @@
   grid-template-columns: auto 1fr auto;
   grid-template-rows: 1fr 1fr;
   grid-template-areas: 'image name select' 'image price select';
-  gap: 0 16px;
+  gap: 0 1rem;
   align-items: center;
 }
 
@@ -56,27 +56,27 @@
 .item--name,
 .item--price {
   font-weight: var(--fw-bold);
-  line-height: 25px;
+  line-height: 1.5625rem;
   color: var(--black);
 
   text-transform: uppercase;
 }
 
 .item--name {
-  font-size: 15px;
+  font-size: 0.9375rem;
   grid-area: name;
   align-self: flex-end;
 }
 .item--price {
   grid-area: price;
   align-self: flex-start;
-  font-size: 14px;
+  font-size: 0.875rem;
   opacity: 0.5;
 }
 .item--quantity {
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: var(--fw-bold);
-  line-height: 25px;
+  line-height: 1.5625rem;
   color: var(--black);
   opacity: 0.5;
   align-self: flex-end;
@@ -88,38 +88,38 @@
   align-items: center;
 }
 .priceBox--name {
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: var(--fw-medium);
-  line-height: 25px;
+  line-height: 1.5625rem;
   color: var(--black);
   opacity: 0.5;
   text-transform: uppercase;
 }
 .priceBox--value {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: var(--fw-bold);
-  line-height: 25px;
+  line-height: 1.5625rem;
   color: var(--black);
 }
 
 .priceBox--shipping,
 .priceBox--vat {
-  margin-top: 8px;
+  margin-top: 0.5rem;
 }
 .priceBox--grandTotal {
-  margin-top: 24px;
+  margin-top: 1.5rem;
 }
 .priceBox--grandTotal .priceBox--value {
   color: var(--primary);
 }
 .cta {
-  margin-top: 32px;
+  margin-top: 2rem;
   width: 100% !important;
   text-transform: uppercase;
 }
 @media screen and (min-width: 710px) {
   .summary {
-    padding: 32px;
+    padding: 2rem;
   }
 }
 

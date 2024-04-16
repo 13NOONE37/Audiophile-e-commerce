@@ -36,8 +36,8 @@
   font-size: 0.8125rem;
   font-weight: var(--fw-bold);
   color: var(--white);
-  line-height: 25px;
-  letter-spacing: 2px;
+  line-height: 1.5625rem;
+  letter-spacing: 0.125rem;
   text-transform: uppercase;
   text-decoration: underline;
   text-decoration-color: transparent;
