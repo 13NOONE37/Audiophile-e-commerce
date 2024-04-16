@@ -33,6 +33,7 @@ const page: FC = async () => {
                 desktop_image={`${process.env.API_URL}${item.attributes.preview_image.desktop.data.attributes.url}`}
                 isNew={index === 0}
                 isReversed={index % 2 != 0}
+                key={`headphones_productpreview_${item.attributes.slug}`}
               />
             );
           })}

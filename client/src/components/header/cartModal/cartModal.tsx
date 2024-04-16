@@ -87,5 +87,5 @@ const CartModal = forwardRef<HTMLDivElement, Props>((props, ref) => {
     </div>
   );
 });
-
+CartModal.displayName = 'CartModal';
 export default CartModal;
