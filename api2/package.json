@@ -1,5 +1,5 @@
 {
-  "name": "api",
+  "name": "api-2",
   "private": true,
   "version": "0.1.0",
   "description": "A Strapi application",
@@ -9,12 +9,13 @@
     "build": "strapi build",
     "strapi": "strapi"
   },
+  "devDependencies": {},
   "dependencies": {
-    "@strapi/plugin-cloud": "4.20.5",
-    "@strapi/plugin-i18n": "4.20.5",
-    "@strapi/plugin-users-permissions": "4.20.5",
-    "@strapi/strapi": "4.20.5",
-    "better-sqlite3": "8.6.0",
+    "@strapi/plugin-cloud": "4.24.0",
+    "@strapi/plugin-i18n": "4.24.0",
+    "@strapi/plugin-users-permissions": "4.24.0",
+    "@strapi/provider-upload-cloudinary": "^4.24.0",
+    "@strapi/strapi": "4.24.0",
     "pg": "^8.11.5",
     "pg-connection-string": "^2.6.4",
     "react": "^18.0.0",
@@ -26,7 +27,7 @@
     "name": "A Strapi developer"
   },
   "strapi": {
-    "uuid": "306f1ba1-9610-4e7a-847c-5a0770ce538a"
+    "uuid": "e438b413-66e3-49b2-b6fb-6b756cbf7307"
   },
   "engines": {
     "node": ">=18.0.0 <=20.x.x",
